@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="grille">
       {jeu.map((carte, index) => (
-        <Container valeur={carte.valeur} estDevoilee={selection.includes(index) || resolues.includes(index)} onCliquer={() => handleChoix(index)}/>
+        <Container key={carte.id} valeur={carte.valeur} estDevoilee={selection.includes(index) || resolues.includes(index)} onCliquer={() => handleChoix(index)}/>
       ))}
     </div>
   );
